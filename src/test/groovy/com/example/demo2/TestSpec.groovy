@@ -25,13 +25,27 @@ class TestSpec extends Specification {
         given: "get WebDriver and start testing :)"
         RemoteWebDriver driver = chrome.getWebDriver()
         WebDriverWait wait = new WebDriverWait(driver, 15)
-
-        when: "this is desc of step 1"
+        when: "I go to http://automationpractice.com/index.php web page"
         driver.get(WEB_PAGE)
-
-        then: "do something else"
+        then: "I wait for page to load the search box"
         WebElement foo = wait.until(ExpectedConditions.elementToBeClickable(By.id("search_query_top")))
+        and: "I type shirt word and hit Enter key"
         foo.sendKeys("shirt", Keys.ENTER)
+        and: "I wait for 10 seconds to see the result"
+        sleep(10000)
+    }
+
+    def "This test will fail to see the error message"() {
+        given: "get WebDriver and start testing :)"
+        RemoteWebDriver driver = chrome.getWebDriver()
+        WebDriverWait wait = new WebDriverWait(driver, 15)
+        when: "I go to http://automationpractice.com/index.php web page"
+        driver.get(WEB_PAGE)
+        then: "I wait for page to load the search box but id is incorrect"
+        WebElement foo = wait.until(ExpectedConditions.elementToBeClickable(By.id("foo")))
+        and: "I type shirt word and hit Enter key"
+        foo.sendKeys("shirt", Keys.ENTER)
+        and: "I wait for 10 seconds to see the result"
         sleep(10000)
     }
 }
