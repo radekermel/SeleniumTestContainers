@@ -13,13 +13,16 @@ repositories {
 }
 
 dependencies {
+	testCompile "org.spockframework:spock-core:1.3-groovy-2.5"
+	testCompile "org.testcontainers:selenium:1.12.3"
+	compile group: 'ru.stqa.selenium', name: 'webdriver-expected-conditions', version: '1.0.52'
+	compile "org.codehaus.groovy:groovy-all:2.5.7"
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.codehaus.groovy:groovy'
+	implementation 'org.seleniumhq.selenium:selenium-remote-driver'
+	implementation 'org.seleniumhq.selenium:selenium-firefox-driver'
+	implementation 'org.seleniumhq.selenium:selenium-chrome-driver'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
-}
-
-test {
-	useJUnitPlatform()
 }
