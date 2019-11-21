@@ -1,6 +1,5 @@
 package com.example.demo2
 
-
 import org.junit.Rule
 import org.openqa.selenium.By
 import org.openqa.selenium.Keys
@@ -18,6 +17,8 @@ class TestSpec extends Specification {
 
     RemoteWebDriver driver
     WebDriverWait wait
+    MainPage mainPage
+
 
     @Rule
     BrowserWebDriverContainer chrome = new BrowserWebDriverContainer()
@@ -28,21 +29,15 @@ class TestSpec extends Specification {
     def setup() {
         driver = chrome.getWebDriver()
         wait = new WebDriverWait(driver, 15)
+
     }
 
     def "This is description of this test so that you can understand purpose of it. "() {
         when: "I go to http://automationpractice.com/index.php web page"
         driver.get(WEB_PAGE)
-
         and: "I wait for page to load the search box"
-        WebElement searchQueryBox = wait
-                .until(ExpectedConditions
-                        .elementToBeClickable(By
-                                .id("search_query_top")))
-
-        and: "I type shirt word and hit Enter key"
-        searchQueryBox.sendKeys("shirt", Keys.ENTER)
-
+        mainPage.waitForSearchQueryBox()
+        mainPage.typeShirtIntoTextBox()
         and: "I click the search result"
         WebElement searchResultFadedShirt = wait
                 .until(ExpectedConditions
