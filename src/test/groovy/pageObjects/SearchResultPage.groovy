@@ -1,4 +1,4 @@
-package com.example.demo2
+package pageObjects
 
 import org.openqa.selenium.remote.RemoteWebDriver
 import org.openqa.selenium.support.PageFactory

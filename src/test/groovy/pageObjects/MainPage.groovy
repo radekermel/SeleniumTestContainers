@@ -1,4 +1,4 @@
-package com.example.demo2
+package pageObjects
 
 import org.openqa.selenium.By
 import org.openqa.selenium.Keys

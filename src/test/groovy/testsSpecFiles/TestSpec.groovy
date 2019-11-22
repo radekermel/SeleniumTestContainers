@@ -1,9 +1,12 @@
-package com.example.demo2
+package testsSpecFiles
 
 import org.junit.Rule
 import org.openqa.selenium.chrome.ChromeOptions
 import org.openqa.selenium.remote.RemoteWebDriver
 import org.testcontainers.containers.BrowserWebDriverContainer
+import pageObjects.ItemPage
+import pageObjects.MainPage
+import pageObjects.SearchResultPage
 import spock.lang.Specification
 
 import java.util.concurrent.TimeUnit
