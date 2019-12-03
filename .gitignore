@@ -7,7 +7,6 @@ build/
 
 ### VNC Recordings ###
 .flv
-/recordings/
 
 ### STS ###
 .apt_generated
@@ -34,3 +33,12 @@ out/
 
 ### VS Code ###
 .vscode/
+src/test/recordings/PASSED-testsSpecFiles.TestSpec-Comparision with Testcafe and Cypress-20191204-090914.flv
+src/test/recordings/PASSED-testsSpecFiles.TestSpec-Comparision with Testcafe and Cypress-20191204-091916.flv
+src/test/recordings/PASSED-testsSpecFiles.TestSpec-Comparision with Testcafe and Cypress-20191204-092051.flv
+src/test/recordings/PASSED-testsSpecFiles.TestSpec-Comparision with Testcafe and Cypress-20191204-092542.flv
+src/test/recordings/PASSED-testsSpecFiles.TestSpec-Comparision with Testcafe and Cypress-20191204-093659.flv
+src/test/recordings/PASSED-testsSpecFiles.TestSpec-Comparision with Testcafe and Cypress-20191204-093821.flv
+src/test/recordings/PASSED-testsSpecFiles.TestSpec-This is description of this test so that you can understand purpose of it. -20191126-075924.flv
+src/test/recordings/PASSED-testsSpecFiles.TestSpec-This is description of this test so that you can understand purpose of it. -20191126-081054.flv
+src/test/recordings/PASSED-testsSpecFiles.TestSpec-This is description of this test so that you can understand purpose of it. -20191204-085413.flv
